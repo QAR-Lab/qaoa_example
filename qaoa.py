@@ -18,7 +18,7 @@ G = nx.fast_gnp_random_graph(n, 0.5)
 plt.figure(figsize=(5, 3))
 pos = nx.spring_layout(G)
 nx.draw(G, with_labels=True, node_size=700, pos=pos)
-plt.show()
+plt.savefig("example_graph.png")
 
 
 # -------------
@@ -82,7 +82,7 @@ plt.figure(figsize=(7, 4))
 plt.plot(cost_list)
 plt.ylabel("Cost")
 plt.xlabel("Iteration")
-plt.show()
+plt.savefig("cost_minimization.png")
 
 # -------------
 # Listing 1.6 |
@@ -98,4 +98,4 @@ plt.style.use('seaborn-v0_8')
 plt.bar(range(2 ** len(wires)), probs)
 plt.ylabel("Probability")
 plt.xlabel("Bitstrings")
-plt.show()
+plt.savefig("measurement_probabilities.png")
